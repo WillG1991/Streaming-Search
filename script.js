@@ -16,6 +16,7 @@ $(document).ready(function () {
     disneyLocation.innerHTML="";
     huluLocation.innerHTML="";
     appleLocation.innerHTML="";
+    hboLocation.innerHTML="";
     var keyWord = $("#search-text").val();
     url = `https://omdbapi.com/?t=${keyWord}&apikey=5216b962`;
     fetch(url)
