@@ -35,7 +35,7 @@ $(document).ready(function () {
         console.log(data["Title"]);
         function noname() {
           if (data["Title"] == undefined) {
-            alert("Title not found")
+            alert("Title not found. Check spelling and try again!")
           };
         };
         noname();
