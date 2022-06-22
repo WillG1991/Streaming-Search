@@ -37,6 +37,7 @@ $(document).ready(function () {
         $("#Plot").text(data["Plot"]);
         $("#Poster").attr("src", data["Poster"]);
         $("#Score").text(data["imdbRating"]);
+        $("#Runtime").text(data["Runtime"]);
         
         
         
