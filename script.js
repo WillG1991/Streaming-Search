@@ -4,6 +4,7 @@ var primeLocation = document.querySelector(".streamingPrime");
 var disneyLocation = document.querySelector(".streamingDisney");
 var huluLocation = document.querySelector(".streamingHulu");
 var appleLocation = document.querySelector(".streamingApple");
+var hboLocation = document.querySelector(".streamingHBO");
 //Function  start//
 $(document).ready(function () {
   var movieCountry = "";
@@ -96,6 +97,17 @@ $(document).ready(function () {
               huluLocation.innerHTML ="<button id='hulu-bt' class='button is-link is-outlined'>Available!</button>";
               $('#hulu-bt').click(function() {
                 window.location = huluValue;
+             });
+            }
+            //Checks api for HBO availbility//
+            else if (response.streamingInfo.hbo) {
+              $("#streamingPrime").text(response.streamingInfo.hbo.us.link);
+              var hboValue = response.streamingInfo.hbo.us.link;
+              console.log(hboValue);
+              //if available adds button to page for streaming services//
+              hboLocation.innerHTML ="<button id='hbo-bt' class='button is-link is-outlined'>Available!</button>";
+              $('#hbo-bt').click(function() {
+                window.location = hboValue;
              });
             }
             //Checks api for apple availbility//
