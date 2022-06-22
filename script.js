@@ -108,9 +108,7 @@ $(document).ready(function () {
               $('#apple-bt').click(function() {
                 window.location = appleValue;
              });
-            } else {
-              alert("Movie/Show not found. Check spelling and try again!")
-            };
+            } 
             
             
             
