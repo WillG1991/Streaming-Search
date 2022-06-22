@@ -5,6 +5,7 @@ var disneyLocation = document.querySelector(".streamingDisney");
 var huluLocation = document.querySelector(".streamingHulu");
 var appleLocation = document.querySelector(".streamingApple");
 var hboLocation = document.querySelector(".streamingHBO");
+var showtimeLocation = document.querySelector(".streamingShowtime");
 //Function  start//
 $(document).ready(function () {
   var movieCountry = "";
@@ -17,6 +18,7 @@ $(document).ready(function () {
     huluLocation.innerHTML="";
     appleLocation.innerHTML="";
     hboLocation.innerHTML="";
+    showtimeLocation.innerHTML="";
     var keyWord = $("#search-text").val();
     url = `https://omdbapi.com/?t=${keyWord}&apikey=5216b962`;
     fetch(url)
@@ -109,6 +111,17 @@ $(document).ready(function () {
               hboLocation.innerHTML ="<button id='hbo-bt' class='button is-link is-outlined'>Available!</button>";
               $('#hbo-bt').click(function() {
                 window.location = hboValue;
+             });
+            }
+            //Checks api for showtime availbility//
+            else if (response.streamingInfo.showtime) {
+              $("#streamingShowtime").text(response.streamingInfo.showtime.us.link);
+              var showtimeValue = response.streamingInfo.showtime.us.link;
+              console.log(showtimeValue);
+              //if available adds button to page for streaming services//
+              showtimeLocation.innerHTML ="<button id='showtime-bt' class='button is-link is-outlined'>Available!</button>";
+              $('#showtime-bt').click(function() {
+                window.location = showtimeValue;
              });
             }
             //Checks api for apple availbility//
