@@ -32,6 +32,13 @@ $(document).ready(function () {
         console.log(movieTag);
         //Api data is displayed on page//
         $("#Title").text(data["Title"]);
+        console.log(data["Title"]);
+        function noname() {
+          if (data["Title"] == undefined) {
+            alert("Title not found")
+          };
+        };
+        noname();
         $("#Genre").text(`${data["Genre"]}`);
         $("#Director").text(data["Director"]);
         $("#Plot").text(data["Plot"]);
