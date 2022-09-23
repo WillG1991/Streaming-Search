@@ -5,9 +5,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-  <link rel="stylesheet" href="/style.css">
-
-
+  <link rel="stylesheet" href="./assets/style/style.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 
@@ -19,7 +18,7 @@
 <section class="hero is-medium is-link">
   <div class="hero-body">
 
-
+    <img src="assets/img/popcorn.png">
     <h1 class="title is-1">Streaming Search</h1>
 
     <!--- Movie Search Input-->
@@ -30,6 +29,7 @@
     <button id="search-bt" class="button is-focused is-fullwidth ">Search</button>
     <!--- Movie Search  End-->
   </div>
+  
 </section>
 
 <!---- Movie Jumbotron End-->
@@ -43,7 +43,7 @@
 
 
   <!--- MOVIE TITLE  START-->
-  <div class="columns ml-2">
+  <div class="columns ml-2 is-link title2">
     <div class="column">
       <h2 class="title is-2">Title:</h2>
       <p id="Title" class="is-size-3 mgl-large"></p>
@@ -79,8 +79,8 @@
         <div class="column">
           <p class="bd-notification is-primary">
           <div class="column">
-            <h3 class="movie-info is-size-5 is-underlined">Plot:</h3>
-            <p id="Plot"></p>
+            <h3 class="movie-info is-size-5 is-underlined ">Plot:</h3>
+            <p id="Plot" class="plotText"></p>
             <div class="column">
               <h3 class="movie-info is-size-5 is-underlined">Runtime:</h3>
               <p id="Runtime"></p>
@@ -93,6 +93,7 @@
       <!--- MOVIE INFORMATION END-->
 
       <!--- MOVIE AVAILBILITY START----------------->
+      
 
       <!---- STREAMING AREA NETFLIX ----->
       <div class="column">
