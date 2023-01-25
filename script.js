@@ -19,8 +19,7 @@ $(document).ready(function () {
     huluLocation.innerHTML="";
     appleLocation.innerHTML="";
     hboLocation.innerHTML="";
-    showtimeLocation.innerHTML="";
-    paramountLocation.innerHTML="";
+   
     var keyWord = $("#search-text").val();
     url = `https://omdbapi.com/?t=${keyWord}&apikey=5216b962`;
     fetch(url)
@@ -43,7 +42,6 @@ $(document).ready(function () {
         $("#Director").text(data["Director"]);
         $("#Plot").text(data["Plot"]);
         $("#Poster").attr("src", data["Poster"]);
-        $("#Score").text(data["imdbRating"]);
         $("#Runtime").text(data["Runtime"]);
         
         
@@ -70,7 +68,7 @@ $(document).ready(function () {
               $("#streamingNetflix").text(response.streamingInfo.netflix.us.link);
               var netflixValue = response.streamingInfo.netflix.us.link;
               //if available adds button to page for streaming services//
-              netflixLocation.innerHTML ="<button id='netflix-bt' class='button is-link is-outlined'>Available!</button>";
+              netflixLocation.innerHTML ="<button id='netflix-bt' class='button is-link is-outlined'>Stream here!</button>";
               console.log(netflixValue);
               $('#netflix-bt').click(function() {
                 window.location = netflixValue;
@@ -85,7 +83,7 @@ $(document).ready(function () {
               var primeValue = response.streamingInfo.prime.us.link;
               console.log(primeValue);
               //if available adds button to page for streaming services//
-              primeLocation.innerHTML ="<button id='prime-bt' class='button is-link is-outlined'>Available!</button>";
+              primeLocation.innerHTML ="<button id='prime-bt' class='button is-link is-outlined'>Stream here!</button>";
               $('#prime-bt').click(function() {
                 window.location = primeValue;
              });
@@ -96,7 +94,7 @@ $(document).ready(function () {
               var disneyValue = response.streamingInfo.disney.us.link;
               console.log(disneyValue);
               //if available adds button to page for streaming services//
-              disneyLocation.innerHTML ="<button id='disney-bt' class='button is-link is-outlined'>Available!</button>";
+              disneyLocation.innerHTML ="<button id='disney-bt' class='button is-link is-outlined'>Stream here!</button>";
               $('#disney-bt').click(function() {
                 window.location = disneyValue;
              });
@@ -107,7 +105,7 @@ $(document).ready(function () {
               var huluValue = response.streamingInfo.hulu.us.link;
               console.log(huluValue);
               //if available adds button to page for streaming services//
-              huluLocation.innerHTML ="<button id='hulu-bt' class='button is-link is-outlined'>Available!</button>";
+              huluLocation.innerHTML ="<button id='hulu-bt' class='button is-link is-outlined'>Stream here!</button>";
               $('#hulu-bt').click(function() {
                 window.location = huluValue;
              });
@@ -118,7 +116,7 @@ $(document).ready(function () {
               var hboValue = response.streamingInfo.hbo.us.link;
               console.log(hboValue);
               //if available adds button to page for streaming services//
-              hboLocation.innerHTML ="<button id='hbo-bt' class='button is-link is-outlined'>Available!</button>";
+              hboLocation.innerHTML ="<button id='hbo-bt' class='button is-link is-outlined'>Stream here!</button>";
               $('#hbo-bt').click(function() {
                 window.location = hboValue;
              });
@@ -129,7 +127,7 @@ $(document).ready(function () {
               var showtimeValue = response.streamingInfo.showtime.us.link;
               console.log(showtimeValue);
               //if available adds button to page for streaming services//
-              showtimeLocation.innerHTML ="<button id='showtime-bt' class='button is-link is-outlined'>Available!</button>";
+              showtimeLocation.innerHTML ="<button id='showtime-bt' class='button is-link is-outlined'>Stream here!</button>";
               $('#showtime-bt').click(function() {
                 window.location = showtimeValue;
              });
@@ -140,7 +138,7 @@ $(document).ready(function () {
               var paramountValue = response.streamingInfo.paramount.us.link;
               console.log(paramountValue);
               //if available adds button to page for streaming services//
-              paramountLocation.innerHTML ="<button id='paramount-bt' class='button is-link is-outlined'>Available!</button>";
+              paramountLocation.innerHTML ="<button id='paramount-bt' class='button is-link is-outlined'>Stream here!</button>";
               $('#paramount-bt').click(function() {
                 window.location = paramountValue;
              });
@@ -151,7 +149,7 @@ $(document).ready(function () {
               var appleValue = response.streamingInfo.apple.us.link;
               console.log(appleValue);
               //if available adds button to page for streaming services//
-              appleLocation.innerHTML ="<button id='apple-bt' class='button is-link is-outlined'>Available!</button>";
+              appleLocation.innerHTML ="<button id='apple-bt' class='button is-link is-outlined'>Stream here!</button>";
               $('#apple-bt').click(function() {
                 window.location = appleValue;
              });
